@@ -4,7 +4,7 @@ self.addEventListener('activate', (e) => e.waitUntil(self.clients.claim()));
 
 self.addEventListener('push', (e) => {
   const d = e.data ? e.data.json() : {};
-  e.waitUntil(self.registration.showNotification(d.title || 'Task di coppia', {
+  e.waitUntil(self.registration.showNotification(d.title || 'Double Dare', {
     body: d.body || '',
     icon: 'icon-192.png',
   }));

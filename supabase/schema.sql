@@ -1,4 +1,4 @@
--- Task di coppia: schema, RLS and functions.
+-- Double Dare: schema, RLS and functions.
 -- Run once in Supabase > SQL Editor.
 
 -- =========================================================
