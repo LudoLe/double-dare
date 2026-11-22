@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Task di coppia</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icon-180.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Task">
+  <meta name="theme-color" content="#c44a5f">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <p id="msg"></p>
+
+  <section id="auth" hidden>
+    <h1>Task di coppia</h1>
+    <input id="email" type="email" placeholder="Email" autocomplete="email">
+    <input id="password" type="password" placeholder="Password (min 6 caratteri)" autocomplete="current-password">
+    <input id="name" placeholder="Il tuo nome (solo per registrarti)">
+    <button id="login-btn">Accedi</button>
+    <button id="signup-btn" class="secondary">Registrati</button>
+  </section>
+
+  <section id="link" hidden>
+    <h1>Collegatevi</h1>
+    <p>Il tuo codice invito: <b id="my-code"></b></p>
+    <p>Daglielo, oppure inserisci il suo:</p>
+    <input id="partner-code" placeholder="Codice del partner" autocapitalize="characters">
+    <button id="join-btn">Collega</button>
+    <button id="refresh-btn" class="secondary">Ha usato il mio codice, aggiorna</button>
+    <button class="logout secondary">Esci</button>
+  </section>
+
+  <section id="main" hidden>
+    <h2>Il mio task</h2>
+    <div id="mine" class="card"></div>
+
+    <h2>Il task di <span class="partner-name"></span></h2>
+    <div id="theirs" class="card"></div>
+
+    <h2>Nuovo task per <span class="partner-name"></span></h2>
+    <form id="add" class="card">
+      <textarea id="t-text" placeholder="Cosa deve fare" required maxlength="500"></textarea>
+      <input id="t-reward" placeholder="Premio" required maxlength="300">
+      <input id="t-punishment" placeholder="Punizione" required maxlength="300">
+      <button>Aggiungi al pool</button>
+      <p class="small" id="pool-count"></p>
+    </form>
+
+    <h2>Storico</h2>
+    <ul id="history" class="card"></ul>
+
+    <h2>Impostazioni</h2>
+    <div class="card">
+      <label>Reminder ogni <input id="hours" type="number" min="1" max="168" inputmode="numeric"> ore</label>
+      <button id="hours-btn" class="secondary">Salva</button>
+      <button id="notif-btn">Attiva notifiche</button>
+      <button class="logout secondary">Esci</button>
+    </div>
+  </section>
+</body>
+</html>

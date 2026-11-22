@@ -1,0 +1,25 @@
+:root { --accent: #c44a5f; --bg: #fdf6f7; --card: #fff; --text: #222; --muted: #777; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #1b1617; --card: #2a2224; --text: #eee; --muted: #aaa; }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0 auto; max-width: 560px; background: var(--bg); color: var(--text);
+  font: 16px/1.4 -apple-system, system-ui, sans-serif;
+  padding: calc(env(safe-area-inset-top) + 16px) 16px calc(env(safe-area-inset-bottom) + 32px);
+}
+h1 { color: var(--accent); }
+h2 { font-size: 1.05rem; margin: 24px 0 8px; }
+.card { background: var(--card); border-radius: 14px; padding: 14px; margin: 0; }
+ul.card { list-style: none; }
+ul.card li { padding: 6px 0; border-bottom: 1px solid #8882; }
+ul.card li:last-child { border-bottom: 0; }
+input, textarea, button { width: 100%; font: inherit; padding: 12px; margin: 6px 0; border-radius: 10px; border: 1px solid #8884; background: var(--card); color: var(--text); }
+textarea { min-height: 70px; }
+label input { width: 5em; display: inline-block; }
+button { background: var(--accent); color: #fff; border: 0; font-weight: 600; }
+button.secondary { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+.text { font-size: 1.1rem; font-weight: 600; margin-top: 0; }
+.mult { color: var(--accent); }
+.small { color: var(--muted); font-size: .9rem; }
+#msg { color: var(--accent); min-height: 1em; margin: 0; }
